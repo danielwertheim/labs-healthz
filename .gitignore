@@ -1,0 +1,36 @@
+# vs
+.vs/
+[Bb]in/
+[D]ebug/
+[Aa]rtifacts/
+[Oo]bj/
+[Tt]est[Rr]esult/
+[Tt]emp/
+*.user
+*.vspscc
+*.vssscc
+*.suo
+*.cache
+
+# misc
+*~
+*.swp
+*.sdf
+*.orig
+*.pfx
+.env
+
+# rider
+.idea
+
+# vs-code
+.vscode
+
+# resharper
+_ReSharper.*
+*.resharper*
+*.[Rr]e[Ss]harper.user
+*.DotSettings.user
+
+#windows stuff
+Thumbs.db

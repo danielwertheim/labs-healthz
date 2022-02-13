@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  mongodb:
+    image: mongo:5
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${mongodb_user}
+      MONGO_INITDB_ROOT_PASSWORD: ${mongodb_pass}
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+      MSSQL_PID: Express
+      ACCEPT_EULA: Y
+      SA_PASSWORD: ${mssql_pass}
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: ${rabbitmq_user}
+      RABBITMQ_DEFAULT_PASS: ${rabbitmq_pass}
